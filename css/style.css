@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    margin: 15px;
+}
+
+.masonry {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1024px;
+    column-gap: 1.5em;
+    font-size: .85em;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+}
+
+.item {
+    display: inline-block;
+    background: #fff;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 0px 0px 4px 2px #ccc;
+}
+
+.item .author-block {
+    height: 64px;
+}
+
+.item .author-block .avatar {
+    float: left;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin: 12px;
+}
+
+.item .author-block .name {
+    float: left;
+    margin: 12px 12px 12px 0;
+    height: 40px;
+    line-height: 20px;
+}
+
+.item .author-block .name.only-name {
+    line-height: 40px;
+}
+
+.item .author-block .rel-date {
+    float: right;
+    margin: 12px;
+    line-height: 40px;
+}
+
+.item .likes {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.item .likes i {
+    background-image: url(/img/like.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin: 11px;
+    float: left;
+}
+
+.item .likes span {
+    display: inline-block;
+}
+
+.item .message-block .message {
+    margin: 0px 11px 11px 11px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 767px) {
+    .item .author-block {
+        float: right;
+        width: calc(50% - 30px);
+        border-bottom: 1px solid #eee;
+        margin: 15px 15px 0px 15px;
+    }
+
+    .item .img-block {
+        float: left;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .item .likes {
+        float: left;
+        width: calc(50% - 30px);
+        margin: 0 15px;
+    }
+
+    .item .message-block {
+        float: left;
+        width: calc(50% - 30px);
+        margin: 0 15px;
+    }
+}
+@media only screen and (min-width: 668px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
